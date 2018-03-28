@@ -1,0 +1,25 @@
+<h1> Accounts Show </h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Account Number</th>
+      <th scope="col">Account Balance</th>
+    </tr>
+  </thead>
+
+  <% @accounts.each do |account| %>
+    <tr scope="row">
+      <td><%= account.first_name %></td>
+      <td><%= account.last_name %></td>
+      <td><%= account.acc_number %></td>
+      <td><%= account.balance %></td>
+      <td><button type="button" class="btn btn-light"><%= link_to 'Show', account_path(account) %></button></td>
+      <td><button type="button" class="btn btn-light"><%= link_to 'Destroy', account_path(account),
+              method: :delete,
+              data: { confirm: 'Are you sure?'} %></button></td>
+    </tr>
+  <% end %>
+</table>

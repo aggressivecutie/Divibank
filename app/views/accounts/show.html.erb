@@ -1,0 +1,27 @@
+<div>
+  <p>
+    <strong>First Name</strong>
+    <%= @account.first_name %>
+  </p>
+
+  <p>
+    <strong>Last Name</strong>
+    <%= @account.last_name %>
+  </p>
+
+  <p>
+    <strong>Account Number</strong>
+    <%= @account.acc_number %>
+  </p>
+
+  <p>
+    <strong>Balance:</strong>
+    <%= @account.balance %>
+  </p>
+
+  <button type="button" class="btn btn-light"><%= link_to 'Destroy', account_path(@account),
+    method: :destroy,
+    data: { confirm: 'Are you sure?' } %></button>
+
+  <button type="button" class="btn btn-light"><%= link_to "All Accounts", accounts_url %></button>
+</div>

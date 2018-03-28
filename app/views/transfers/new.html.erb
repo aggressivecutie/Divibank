@@ -1,0 +1,34 @@
+<div>
+  <h1> New Transfers </h1>
+
+  <%= form_for(@transfer) do |form| %>
+    <p>
+      <%= form.label :amount%><br>
+      <%= form.text_field :amount %>
+    </p>
+
+    <p>
+      <%= form.label :currency %><br>
+      <%= form.text_field :currency %>
+    </p>
+
+    <p>
+      <%= form.label :conversion_rate %><br>
+      <%= form.text_field :conversion_rate %>
+    </p>
+
+    <p>
+      <%= form.label :sender_acc, "From Account Number" %><br>
+      <%= form.text_field :sender_acc_id %>
+    </p>
+
+    <p>
+      <%= form.label :recipient_acc, "Destination Account Number" %><br>
+      <%= form.text_field :recipient_acc_id%>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+</div>

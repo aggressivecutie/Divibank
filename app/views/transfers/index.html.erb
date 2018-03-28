@@ -1,0 +1,25 @@
+<div>
+  <h1> All Transfers </h1>
+
+  <table class="table">
+    <tr>
+      <th scope="col">Amount</th>
+      <th scope="col">Currency</th>
+      <th scope="col">Source Account Number</th>
+      <th scope="col">Destination Account Number</th>
+      <th scope="col">Transfer Number</th>
+    </tr>
+
+    <% @transfers.each do |transfer| %>
+      <tr scope="rows">
+        <td><%= transfer.amount %></td>
+        <td><%= transfer.currency %></td>
+        <td><%= transfer.conversion_rate %></td>
+        <td><%= transfer.transfer_number %></td>
+        <td><%= transfer.sender_acc %></td>
+        <td><%= transfer.recipient_acc %></td>
+        <td><%= link_to 'Show', transfer_path(@transfer) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
